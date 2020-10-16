@@ -4,7 +4,7 @@
 Public Function ReplaceText (find, repl)
 	cnt = 0
 	For Each t In ActiveDocument.Texts
-		If InStr(t.Text, "CONTROLLER") Then
+		If InStr(t.Text, find) Then
 			newStr = Replace(t.Text, find, repl)
 			t.Text = newStr
 			cnt = cnt + 1
